@@ -1,0 +1,15 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    image: imdb-ratings-backend:latest
+
+    ports:
+      - "8080:8080"
+
+    env_file:
+      - ./backend/.env
+
+    restart: always
